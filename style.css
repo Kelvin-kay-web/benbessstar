@@ -1,0 +1,594 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: medium;
+}
+
+html{
+    background: linear-gradient(135deg, #210431, #ca1b87, #722a6c);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100%;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.85);
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.main{
+    width: 100%;
+    min-height: 100vh;
+}
+
+.navbar{
+    width: 100%;
+    max-width: 1400px;
+    height: 100px;
+    margin: auto;
+    animation: fadeInDown 0.8s ease-out;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.2);
+    border-bottom: 2px solid rgba(255, 165, 0, 0.3);
+    border-radius: 0 0 15px 15px;
+}
+
+
+.icon {
+    width: 150px;
+    float: left;
+    height: 70px;
+    background-image: url(background1.jpg.webp);
+}
+
+
+.logo{
+   color: orange;
+    font-size: 35px;
+    font-family: 'Playfair Display', serif;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+    font-weight: 800;
+    animation: glow 2s infinite;
+    letter-spacing: 2px;
+}
+
+.navbar h1,
+.navbar h2,
+.navbar h3,
+.navbar h4,
+.navbar h5,
+.navbar h6{
+    color: orange !important;
+}
+
+
+.menu ul{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.menu ul li{
+    list-style: none;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: lavender;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menu ul li a:hover{
+    color: red;
+}
+
+.search{
+    width: 300px;
+    float: left;
+    margin-left: 850px; 
+}
+
+.srch{
+    width: 150px;
+    max-width: 70vw;
+    height: 40px;
+    background: transparent;
+    border: 1px solid blue;
+    color: white;
+    padding: 0 10px;
+    border-radius: 5px 0 0 5px;
+}
+
+.btn{
+    width: 70px;
+    height: 40px;
+    background: blue;
+    font-weight: bold;
+    border: 1px solid blue;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background: linear-gradient(
+                90deg, #06d6a0, #ef476f);
+    color: white;
+}
+
+@media(max-width: 1024px){
+    .main{
+        background-position: center;
+        background-size: cover;
+    }
+
+}
+
+@media(max-width: 1024px){
+    .main{
+        background-position: center;
+        background-size: cover;
+    }
+
+    .search .srch{
+        width: 50%;
+    }
+
+    .btn{
+        width: 40%;
+    }
+
+}
+
+@media(max-width: 768px){
+    .main{
+        background-position: center top;
+        background-attachment: scroll;
+    }
+
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .menu ul{
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .search{
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .srch{
+        width: 70%;
+    }
+
+    .btn{
+        width: 25%;
+    }
+
+}
+
+@media (max-width: 480px){
+    .main{
+        background-position: center top;
+        background-attachment: scroll;
+    }
+
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .menu ul{
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .search{
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .srch{
+        width: 65%;
+    }
+
+    .btn{
+        width: 30%;
+    }
+
+    h1{
+        font-size: 1.5rem;
+    }
+}
+
+.hamburger{
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.hamburger i{
+    color: blue;
+}
+
+@media (max-width: 768px){
+    .menu ul{
+        display: none;
+        flex-direction: column;
+        background: rgba(7, 59, 76, 0.05);
+        position: absolute;
+        top: 75px;
+        right: 0;
+        width: 200px;
+        padding:20px;
+        border-radius: 10px;
+    }
+
+    .menu ul.active{
+        display: flex;
+    }
+    .hamburger{
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+}
+
+
+@media (max-width: 768px){
+    .search{
+        width: 100%;
+        order: 2;
+        margin-bottom: 15px;
+        display: flex;
+        gap: 5px;
+    }
+
+    .search .srch{
+        width: 70%;
+    }
+
+    .search .btn{
+        width: 28%;
+    }
+
+    .menu ul{
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 90%;
+        max-width: 300px;
+        background: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        border-radius: 10px;
+        display: none;  
+        gap: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        z-index: 100;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .menu ul .active{
+        display: flex;
+    }
+
+    .menu ul li{
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu ul li a{
+        font-size: 18px;
+        padding: 10px 0;
+        display: block;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+}
+
+.content{
+    width: 90px;
+    width: 1200px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.content .par{
+   padding: 20px;
+   padding-bottom: 25px;
+   font-family: 'Poppins', sans-serif;
+   letter-spacing: 0.5px;
+   line-height: 30px;
+   animation: fadeInUp 0.8s ease-out 0.3s backwards;
+}
+
+.content .h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 70px;
+    padding-left: 50px;
+    margin-top: 9%;
+    letter-spacing: 2px;
+    color: white;
+    font-weight: 800;
+    animation: slideInLeft 0.8s ease-out;
+    line-height: 1.1;
+}
+
+
+
+.text-section{
+    flex: 1;
+    min-width: 300px;
+}
+
+.text-section h1{
+    font-size: 50px;
+}
+
+.text-section span{
+    color: rgb(82, 42, 2);
+}
+
+.par{
+    margin: 20px 0;
+    line-height: 1.5;
+
+}
+
+h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+    color: gold;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li{
+    background-color: none;
+    font-size: 20px;
+}
+.cn{
+    background: mediumturquoise;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.cn a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.cn:hover{
+    background: linear-gradient(90deg, mediumturquoise, red);
+}
+
+@media(max-width:900px){
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.form{
+    flex: 0 0 300px;
+    background: rgba(7, 59, 76, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 250px;
+}
+
+.form h2{
+    text-align: center;
+    color: white;
+    background: linear-gradient(90deg, mediumturquoise, blue);
+    padding: 8px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.form input{
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid mediumspringgreen;
+    color: black;
+}
+
+.form input:focus{
+    overflow: none;
+}
+
+.btnn{
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background: mediumturquoise;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btnn:hover{
+    background: linear-gradient(90deg, mediumspringgreen, red);
+}
+
+.btnn a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.form link, .liw{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.form .link a{
+    color: blue;
+    text-decoration: none;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+}
+
+.icons i{
+    font-size: 30px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.icons i:hover{
+    transform: scale(1.2);
+    color: white;
+}
+   
+.whatsapp-btn{
+    background-color: #25D366;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.whatsapp-btn:hover{
+    background: linear-gradient(90deg, mediumspringgreen, red);
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.call-btn{
+    display: block;
+    background: green;
+    color: white;
+    padding: 10px;
+    margin: 5px 0;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+
+.call-btn:hover{
+    background: linear-gradient(90deg, mediumspringgreen, red);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.fade-in{
+    animation: fadeIn 2s forwards;
+}
+
+.admission-form{
+    width: 60%;
+    margin: auto;
+    background: transparent;
+    padding: 20px;
+    border-radius: 10px;
+}
+.admission-form h2{
+    color: #004080;
+    margin-top: 20px;
+}
+.admission-form label{
+    display: block;
+    margin-top: 10px;
+    font-weight: 400;
+}
+.admission-form input
+.admission-form select
+.admission-form textarea{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.admission-form button{
+    background: blue;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+.admission-form button:hover{
+    background: linear-gradient(90deg, mediumspringgreen, red);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.icon a:hover ion-icon[name="logo-facebook"] {
+    color: #1877f3;
+}
+.icon a:hover ion-icon[name="logo-instagram"] {
+    color: #e4405f;
+}
+.icon a:hover ion-icon[name="logo-tiktok"] {
+    color: #25f4ee;
+}
+.icon a:hover ion-icon[name="logo-youtube"] {
+    color: #ff0000;
+}
+.icon a:hover ion-icon[name="logo-linkedin"] {
+    color: #0a66c2;
+}
